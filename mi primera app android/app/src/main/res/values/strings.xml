@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Calculadora de Enteros</string>
+    <string name="app_title">Calculadora de Enteros</string>
+    <string name="radio_suma">Sumar</string>
+    <string name="radio_resta">Restar</string>
+    <string name="input1">Sumando</string>
+    <string name="input2">Sumando</string>
+    <string name="radio_multiplicacion">multiplicar</string>
+    <string name="radio_divicion">Dividir</string>
+    <string name="result_output">El Resultado de la operación es...</string>
+    <string name="boton_calcular">Calcular</string>
+</resources>

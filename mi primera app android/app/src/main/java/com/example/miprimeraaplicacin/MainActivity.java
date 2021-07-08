@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //enlaza los componentes de la interfaz visual(MainActivity.xml) con variables en java(MainActivity.java)
         N1=(EditText)findViewById(R.id.Numero1);
         N2=(EditText)findViewById(R.id.Numero2);
         Res=(TextView)findViewById(R.id.Resultado);
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         RadioButton dif=(RadioButton) findViewById(R.id.Resta);
         RadioButton mul=(RadioButton) findViewById(R.id.Producto);
         RadioButton div=(RadioButton) findViewById(R.id.Dividir);
+        //añade listeners a los radioButtons
         add.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -72,8 +74,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 //El siguiente metodo realizara las operaciones dependiendo de la respuesta
-
     public void Operar(View view){
+        //obtinen los balores de los radiosButtons y los textviews 
         String Valor1=N1.getText().toString();
         String Valor2=N2.getText().toString();
         int Num1=Integer.parseInt(Valor1);
@@ -82,7 +84,8 @@ public class MainActivity extends AppCompatActivity {
         RadioOp=findViewById(RadioId);
         String Resultado;
         CharSequence text = RadioOp.getText();
-        if(Valor1 != null && Valor2 != null) {
+        //pregunta por valores nulos en los textviews y realiza las operaciones
+        if(Valor1.equals("") && Valor2.equals("")) {
             if ("Sumar".equals(text)) {
                 int Suma = Num1 + Num2;
                 Resultado = String.valueOf(Suma);
